@@ -20,7 +20,7 @@ def get_english_meaning(file, emoticon)
   # code goes here
   lib = load_library(file)
   lib.each do |name, language|
-    if language.value? == emoticon
+    if language.value?(emoticon)
       return name
     end
   end
