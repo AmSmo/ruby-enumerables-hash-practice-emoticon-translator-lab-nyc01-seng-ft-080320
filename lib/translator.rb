@@ -12,8 +12,12 @@ def load_library(file)
 end
 
 def get_japanese_emoticon(file, emoticon)
-    lib = load_library(file)
-    lib[emoticon][:japanese]
+  lib = load_library(file)
+  lib.each do |name, language|
+    if language.value?(emoticon)
+      return name
+    end
+  end
 end
 
 def get_english_meaning(file, emoticon)
