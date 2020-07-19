@@ -4,9 +4,8 @@ def load_library(file)
   translated = {}
   emoticons = YAML.load_file(file)
   emoticons.each do |name, lang_array|
-    lang_array.each do |eng,jap|
-      translated[name][:english] = eng
-      translated[name][:japanese] = jap
+      translated[name][:english] = lang_array[0]
+      translated[name][:japanese] = lang_array[1]
     end
   end
   translatd
