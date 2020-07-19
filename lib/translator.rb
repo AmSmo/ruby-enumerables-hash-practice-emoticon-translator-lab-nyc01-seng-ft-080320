@@ -1,6 +1,5 @@
 # require modules here
 require "yaml"
-require "pry"
 
 def load_library(file)
   translated = {}
@@ -12,10 +11,13 @@ def load_library(file)
   translated
 end
 
-def get_japanese_emoticon
-  # code goes here
+def get_japanese_emoticon(file, emoticon)
+    lib = load_library(file)
+    lib[emoticon][:japanese]
 end
 
 def get_english_meaning
   # code goes here
+  lib = load_library(file)
+    lib[emoticon][:english]
 end
