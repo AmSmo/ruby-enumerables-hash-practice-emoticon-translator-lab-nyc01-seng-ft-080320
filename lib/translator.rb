@@ -8,7 +8,7 @@ def load_library(file)
       translated[name][:japanese] = lang_array[1]
     end
   end
-  translatd
+  translated
 end
 
 def get_japanese_emoticon
