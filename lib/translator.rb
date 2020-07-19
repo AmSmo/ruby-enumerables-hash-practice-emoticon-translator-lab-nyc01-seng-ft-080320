@@ -19,5 +19,7 @@ end
 def get_english_meaning(file, emoticon)
   # code goes here
   lib = load_library(file)
-  lib.select {|k,v| v.value == emoticon}
+  lib.select do |k,v|
+    binding.pry
+  end
 end
