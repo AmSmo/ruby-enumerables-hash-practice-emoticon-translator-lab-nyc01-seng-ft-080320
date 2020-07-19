@@ -1,9 +1,11 @@
 # require modules here
-require "yaml"
+require "yaml", "pry"
+
 def load_library(file)
   translated = {}
   emoticons = YAML.load_file(file)
   emoticons.each do |name, lang_array|
+    binding.pry
       translated[name][:english] = lang_array[0]
       translated[name][:japanese] = lang_array[1]
     end
