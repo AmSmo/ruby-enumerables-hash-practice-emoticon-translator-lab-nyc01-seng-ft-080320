@@ -19,7 +19,7 @@ end
 def get_english_meaning(file, emoticon)
   # code goes here
   lib = load_library(file)
-  lib.select do |k,v|
+  lib[:japanese].select do |k,v|
     binding.pry
   end
 end
